@@ -104,7 +104,7 @@ resource "mongodbatlas_event_trigger" "test" {
 * `function_id` - (Optional) The ID of the function associated with the trigger.
 * `disabled` - (Optional) Default: `false` If `true`, the trigger is disabled.
 
-* `config_operation_type` - Required for `AUTHENTICATION` type. The [authentication operation type](https://www.mongodb.com/docs/atlas/atlas-ui/triggers/#std-label-atlas-triggers) to listen for. Possible Values: `LOGIN`, `CREATE`, `DELETE`
+* `config_operation_type` - Required for `AUTHENTICATION` type. The [authentication operation type](https://www.mongodb.com/docs/atlas/atlas-ui/triggers/authentication-triggers/#authentication-events) to listen for. Possible Values: `LOGIN`, `CREATE`, `DELETE`
 * `config_providers` - Required for `AUTHENTICATION` type. A list of one or more [authentication provider](https://www.mongodb.com/docs/atlas/app-services/authentication/#authentication-providers-1) id values. The trigger will only listen for authentication events produced by these providers.
 
 * `config_operation_types` - Required for `DATABASE` type. The [database event operation types](https://www.mongodb.com/docs/atlas/atlas-ui/triggers/database-triggers/#std-label-atlas-database-event-operation-types) to listen for. This must contain at least one value. Possible Values: `INSERT`, `UPDATE`, `REPLACE`, `DELETE`
@@ -129,7 +129,6 @@ In addition to all arguments above, the following attributes are exported:
 * `id` - Terraform's unique identifier used internally for state management.
 * `trigger_id` - The unique ID of the trigger.
 * `function_name` - The name of the function associated with the trigger.
-
 ## Import
 
 Event trigger can be imported using project ID, App ID and Trigger ID, in the format `project_id`--`app_id`-`trigger_id`, e.g.
