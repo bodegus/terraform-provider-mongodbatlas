@@ -129,6 +129,7 @@ In addition to all arguments above, the following attributes are exported:
 * `id` - Terraform's unique identifier used internally for state management.
 * `trigger_id` - The unique ID of the trigger.
 * `function_name` - The name of the function associated with the trigger.
+
 ## Import
 
 Event trigger can be imported using project ID, App ID and Trigger ID, in the format `project_id`--`app_id`-`trigger_id`, e.g.
